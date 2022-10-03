@@ -1,13 +1,7 @@
 function flipEveryNChars(input, n) {
   // your code here
-  let reges = `(.{${n}})`;
-  let parsed = new RegExp(reges);
-
-  let result = input
-    .split(parsed)
-    .map((e) => e.split('').reverse().join(''))
-    .join('');
-  return result;
+  let secciones=Array.from(input);
+  return secciones;
 }
 
 let input = 'a short example';
