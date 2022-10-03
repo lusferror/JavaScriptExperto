@@ -3,7 +3,17 @@ let obj = {
 };
 
 function getSquaredElementsAtProperty(obj, key) {
-    // your code here
+  // your code here
+  let arr = [];
+  if (!Array.isArray(obj[key]) || obj[key].length == 0) {
+    return arr;
+  }
+  else {
+    obj[key].forEach(element => {
+      arr.push(element ** 2);
+    });
+    return arr;
+  }
 }
 
 let output = getSquaredElementsAtProperty(obj, 'key');
